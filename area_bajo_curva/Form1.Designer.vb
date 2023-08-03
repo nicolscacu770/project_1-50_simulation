@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,11 +20,15 @@ Partial Class Form1
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.punto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.coor_X = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.coor_Y = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -35,7 +39,11 @@ Partial Class Form1
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -60,13 +68,46 @@ Partial Class Form1
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.DataGridView1)
         Me.TabPage2.Location = New System.Drawing.Point(4, 25)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(192, 71)
+        Me.TabPage2.Size = New System.Drawing.Size(802, 399)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "TabPage2"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.punto, Me.coor_X, Me.coor_Y})
+        Me.DataGridView1.Location = New System.Drawing.Point(16, 68)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowTemplate.Height = 24
+        Me.DataGridView1.Size = New System.Drawing.Size(240, 280)
+        Me.DataGridView1.TabIndex = 13
+        '
+        'punto
+        '
+        Me.punto.HeaderText = "punto"
+        Me.punto.MinimumWidth = 6
+        Me.punto.Name = "punto"
+        Me.punto.Width = 125
+        '
+        'coor_X
+        '
+        Me.coor_X.HeaderText = "x"
+        Me.coor_X.MinimumWidth = 6
+        Me.coor_X.Name = "coor_X"
+        Me.coor_X.Width = 125
+        '
+        'coor_Y
+        '
+        Me.coor_Y.HeaderText = "y"
+        Me.coor_Y.MinimumWidth = 6
+        Me.coor_Y.Name = "coor_Y"
+        Me.coor_Y.Width = 125
         '
         'Label1
         '
@@ -148,11 +189,31 @@ Partial Class Form1
         Me.TextBox5.Size = New System.Drawing.Size(100, 22)
         Me.TextBox5.TabIndex = 10
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(79, 260)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(117, 33)
+        Me.Button1.TabIndex = 11
+        Me.Button1.Text = "Button_generar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(79, 313)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(117, 37)
+        Me.Button2.TabIndex = 12
+        Me.Button2.Text = "Button_graficar"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1064, 640)
+        Me.ClientSize = New System.Drawing.Size(1191, 687)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.TextBox3)
@@ -167,6 +228,8 @@ Partial Class Form1
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.TabControl1.ResumeLayout(False)
+        Me.TabPage2.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -185,4 +248,10 @@ Partial Class Form1
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents punto As DataGridViewTextBoxColumn
+    Friend WithEvents coor_X As DataGridViewTextBoxColumn
+    Friend WithEvents coor_Y As DataGridViewTextBoxColumn
 End Class
